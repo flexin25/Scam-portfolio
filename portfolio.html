@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek - Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -16,41 +17,32 @@
 </script>
 
 <body>
+  <button id="modeToggle" aria-label="Toggle Dark Mode">🌙</button>
   <header id="navbar">
-  <h1>Abhishek Bardhan</h1>
-  <nav>
-    <button id="modeToggle" aria-label="Toggle Dark Mode">🌙</button>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <h1>Abhishek Bardhan</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <!-- 🏠 Hero -->
   <section id="home">
     <div class="hero" data-aos="fade-up">
       <h2>Hi, I'm Abhishek Bardhan</h2>
       <p>A Rookie ahh Web Developer but an Aspiring Learner ready to dive into deep concepts !! </p>
-      <p>Hi</p>
     </div>
   </section>
 
- <!-- 👤 About -->
-<section id="about" data-aos="fade-up" class="glass-section">
-  <h2 class="glow-text">About Me</h2>
-  <p>
-    Hey! I'm Abhishek Bardhan, a digital craftsman who fuses code and creativity. I bring stories to life through sleek visuals and smart design — whether it's a cinematic edit or a clean, responsive website.
-  </p>
-  <p>
-    With a strong grip on front-end tools like <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, and <span class="highlight">React</span>, I shape user experiences that are as dynamic as they are beautiful.
-  </p>
-  <p>
-    When I'm not editing timelines or debugging pixels, you'll find me exploring new tech trends or brewing ideas for my next passion project. Let’s turn imagination into impact.
-  </p>
-</section>
-
+  <!-- 👤 About -->
+  <!-- 👤 About -->
+  <section id="about" data-aos="fade-up" class="glass-section">
+    <h2 class="glow-text">About Me</h2>
+    <p id="typing-text" class="typing-text"></p>
+  </section>
 
   <!-- 🛠️ Skills -->
   <section id="skills" data-aos="fade-up">
@@ -102,7 +94,7 @@
 
   <!-- 👣 Footer -->
   <footer>
-    <p>© Abhishek Bardhan. All rights reserved.</p>
+    <p>© 2025 Abhishek Bardhan. All rights reserved. Made with ❤️‍🔥 and aspiration <3 </p>
   </footer>
 
   <!-- AOS Script -->
@@ -110,7 +102,7 @@
   <script>AOS.init();</script>
 
   <!-- Dark Mode Script -->
-    <!-- Other scripts like AOS -->
+  <!-- Other scripts like AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 
@@ -126,10 +118,32 @@
         toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
       });
     });
+    const aboutText = `Hey! Abhishek Bardhan, a digital craftsman who fuses code and creativity. I bring stories to life through sleek visuals and smart design — whether it's a cinematic edit or a clean, responsive website.
+
+With a strong grip on front-end tools like HTML, CSS, JavaScript, and React, I shape user experiences that are as dynamic as they are beautiful.
+
+When I'm not editing timelines or debugging pixels, you'll find me exploring new tech trends or brewing ideas for my next passion project. Let’s turn imagination into impact.`;
+
+    const typingTarget = document.getElementById("typing-text");
+    let index = 0;
+
+    function typeWriter() {
+      if (index < aboutText.length) {
+        typingTarget.innerHTML += aboutText.charAt(index);
+        index++;
+        setTimeout(typeWriter, 25); // Adjust speed here
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      typeWriter();
+    });
   </script>
 </body>
+
 </html>
 
 
 </body>
+
 </html>

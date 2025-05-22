@@ -13,6 +13,21 @@ body {
     overflow-x: hidden;
 }
 
+.typing-text {
+  font-size: 1rem;
+  color: #f1f1f1;
+  white-space: pre-line;
+  line-height: 1.8;
+  font-family: 'Courier New', monospace;
+  border-right: 2px solid #00bcd4;
+  animation: blinkCursor 0.7s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
 
 body::before {
     content: "";
@@ -84,27 +99,31 @@ nav a:hover {
 }
 
 #modeToggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    z-index: 1000;
-    transition: color 0.3s ease;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00bcd4;
+  transition: all 0.3s ease;
 }
 
 #modeToggle:hover {
-    color: #00bcd4;
+  background: rgba(0, 188, 212, 0.8);
 }
 
 section {
     padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
-    position: relative; /* keep text above background */
+    position: relative;
     z-index: 1;
     background: transparent;
 }
