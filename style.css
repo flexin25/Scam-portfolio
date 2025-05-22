@@ -78,8 +78,8 @@ header {
     top: 0;
     z-index: 999;
     position: relative;
-    backdrop-filter: saturate(180%) blur(10px);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
 }
 
 body.dark header,
@@ -169,8 +169,8 @@ body.dark .skill {
     border-radius: 10px;
     flex: 1 1 280px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: saturate(180%) blur(10px);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
     color: #111;
 }
 
@@ -340,6 +340,7 @@ footer::after {
 }
 .glass-section {
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 40px;
